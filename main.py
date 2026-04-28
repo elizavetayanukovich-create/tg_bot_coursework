@@ -123,7 +123,6 @@ def get_currency_rates():
         response_pln = requests.get("https://api.nbrb.by/exrates/rates/PLN?parammode=2")
         pln_data = response_pln.json()
 
-        # Исправлено: сначала создаем переменную message, потом добавляем в нее
         message = f"Курсы валют к белорусскому рублю\n\n"
         message += f"Дата: {usd_data['Date']}\n\n"
         message += f"USD: {usd_data['Cur_OfficialRate']:.4f} BYN\n"
