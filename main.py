@@ -243,7 +243,6 @@ def Date_now(message):
     bot.send_message(message.chat.id, f"Сегодня: {weekday_name}", reply_markup=create_menu())
 
 
-# Вынесено из Date_now
 @bot.message_handler(func=lambda message: message.text == BUTTON_TRANSLATE)
 @bot.message_handler(commands=['translate'])
 def handle_translate_command(message):
@@ -255,7 +254,6 @@ def handle_translate_command(message):
     bot.register_next_step_handler(msg, process_translation)
 
 
-# Вынесено из Date_now
 def process_translation(message):
     russian_text = message.text
     translated_text = translate_russian_to_english(russian_text)
