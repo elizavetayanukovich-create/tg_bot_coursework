@@ -259,7 +259,7 @@ def process_translation(message):
     translated_text = translate_russian_to_english(russian_text)
     bot.send_message(
         message.chat.id,
-        f"Исходный текст: {russian_text}\nПеревод: {translated_text}",
+        f"\nПеревод: {translated_text}",
         reply_markup=create_menu()
     )
 
